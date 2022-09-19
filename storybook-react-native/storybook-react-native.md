@@ -125,7 +125,7 @@ Once I was able to get a Storybook example working on a React Native project, I 
 
 ![](./images/storybook3.png)
 
-You can find the deployed storybook [here](https://sep.github.io/storybook-react-native/?path=/story/screens-home--basic), and the repo here.
+You can find the deployed storybook [here](https://sep.github.io/storybook-react-native/?path=/story/screens-home--basic), and the repo [here](https://github.com/sep/storybook-react-native).
 
 There are some caveats to consider when deciding to use Storybook for React Native. Some libraries do not have web support, which means they might not display correctly or render at all as they would on a native device. Some extra configuration might also be needed for libraries that are not transpiled. So far, at least in the case of my project, it seems to fit the bill.
 
