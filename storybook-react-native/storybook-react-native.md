@@ -3,7 +3,7 @@
 
 # Three Reasons to Use Storybook React Native Web for Your Next Project
 
-I adopted a dog several months ago. A roly-poly Shar Pei mix.  The decision to take him home was easy. Navigating the adoption process was not. The UX of adopting a dog online is haphazard. You find the dog on your pet adoption app, and you send a message to the shelter in the app and leave your phone number. The shelter texts you on your phone to tell you that you can’t visit the dog until you fill out an application. They give you a link to an application on their website. The site is often terrible, due to the shelter’s shoestring budget. If you are considering many dogs, you could go through this process several times, filling out applications that are mostly identical to the previous ones.
+I adopted a dog several months ago. A roly-poly Shar Pei mix.  The decision to take him home was easy. Navigating the adoption process was not. The UX of adopting a dog online is haphazard. You find the dog on your pet adoption app, and you send a message to the shelter in the app and leave your phone number. The shelter texts you on your phone to tell you that you can’t visit the dog until you fill out an application. They give you a link to an application on their website. Due to the shelter's shoestring budget, the site is terrible. If you are considering many dogs, you could go through this process several times, filling out applications that are mostly identical to the previous ones.
 
 ![You can't resist the face!](./images/puppy.jpg)
 
@@ -12,21 +12,20 @@ I thought it would be much nicer to have this entire process done in-app.  I was
 
 “Let’s build a cross-platform mobile app!”, exclaims the eager-beaver software engineer.
 
-I chose to use React Native, hoping my previous exposure to Typescript would serve me well. After a story mapping session with a partner, we set out to build our first UI. Yet, I found learning React Native UI to be a clumsy experience. React components are advertised to be the epitome of SOLID principles. They are supposed to be independent, reusable pieces that can be developed in isolation. When developing with an emulator or a phone, components are entangled in business logic, interactive states, and app context. That defeats the purpose of its design.
+I chose to use React Native, hoping my previous exposure to Typescript would serve me well. After a [story mapping](https://sep.com/our-work/case-study/digital-user-story-mapping-tool/) session with a partner, we set out to build our first UI. Yet, I found learning React Native UI to be a clumsy experience. React components are advertised to be the epitome of SOLID principles. They are supposed to be independent, reusable pieces that can be developed in isolation. When developing with an emulator or a phone, components are entangled in business logic, interactive states, and app context. That defeats the purpose of its design.
 
 Fed up with the developer experience I went searching for solutions, and stumbled upon Storybook for React Native Web.
 
-Storybook has been around for a while as a JavaScript UI explorer with special testing and debugging capabilities. For each component, you can write “stories” that will render your component in specific states, served directly to your browser. This allows you to approach a component TDD style. Developers write stories as test cases and regularly check your implementation against them.
+[Storybook](https://storybook.js.org/) has been around for a while as a JavaScript UI explorer with special testing and debugging capabilities. For each component, you can write “stories” that will render your component in specific states, served directly to your browser. This allows you to approach a component TDD style. Developers write stories as test cases and regularly check their implementation against them.
 
 Storybook supports React Native, though I found its functionality to be severely lacking. It was missing a lot of core add-ons and functionality that existed for web development.  It was also very difficult to set up due to contrasting architectures.
 Then, I stumbled upon the Storybook for React Native Web add-on. With the addon, React Native components use ReactJS configuration, allowing for a more out-of-the-box Storybook experience.
 
-I took time during SEP’s Hackathon to explore this tool, and once I got it working, I discovered several reasons why you would want to consider using Storybook to develop your React Native UI.
+I took time during SEP’s [Hackathon](https://sep.com/blog/2022-summer-hackathon-recap/) to explore this tool, and once I got it working, I discovered several reasons why you would want to consider using Storybook to develop your React Native UI.
 
 ## Develop components quickly and easily.
 
 Storybook runs independent of your actual app, in a browser on the localhost. This allows developers to develop UI components without ever plugging in a device or firing up an emulator. Game Changer!
-![](./images/storybook4.png)
 
 
 ## Develop components in isolation with visual TDD.
@@ -111,6 +110,7 @@ export const Button = ({
 ```
 
 We are able to see all button states rendered in our local storybook for us to visually inspect.
+![](./images/storybook4.png)
 
 ## Storybook serves as a living style guide.
 
@@ -127,7 +127,7 @@ Once I was able to get a Storybook example working on a React Native project, I 
 
 You can find the deployed storybook [here](https://sep.github.io/storybook-react-native/?path=/story/screens-home--basic), and the repo [here](https://github.com/sep/storybook-react-native).
 
-There are some caveats to consider when deciding to use Storybook for React Native. Some libraries do not have web support, which means they might not display correctly or render at all as they would on a native device. Some extra configuration might also be needed for libraries that are not transpiled. So far, at least in the case of my project, it seems to fit the bill.
+There are some caveats to consider when deciding to use Storybook for React Native. Some libraries do not have web support, which means they might not display correctly or render at all as they would on a native device. Some extra configuration might also be needed for libraries that are not transpiled. So far, at least in the case of my project, it fits the bill. I'm looking forward to using this and exploring the [testing addons](https://storybook.js.org/addons/tag/test/) available.
 
 
 Special thanks to Danny Williams, one of the maintainers of @storybook/react-native and the creator of the React Native Web add-on, for providing an [example repo](https://github.com/dannyhw/addon_react_native_web_example) as a jumping-off point.
